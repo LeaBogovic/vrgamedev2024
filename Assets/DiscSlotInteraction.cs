@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 public class DiscSlotInteraction : MonoBehaviour
 {
     public Transform discSlot;               // Reference to the disc slot's transform
@@ -19,6 +17,7 @@ public class DiscSlotInteraction : MonoBehaviour
         {
             isInSlot = true;
             StartPlaying();
+            Debug.Log("Disc entered the slot, playing audio.");
         }
     }
 
@@ -29,6 +28,7 @@ public class DiscSlotInteraction : MonoBehaviour
         {
             isInSlot = false;
             StopPlaying();
+            Debug.Log("Disc exited the slot, stopping audio.");
         }
     }
 
